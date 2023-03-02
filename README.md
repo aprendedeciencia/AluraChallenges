@@ -28,5 +28,5 @@
 
 ## Autores
 
-| [<img src="https://user-images.githubusercontent.com/118641682/222552464-170d8fe1-83bc-4cd6-b152-269f1032f471.jpg" width=115><br><sub>Camila Fernanda Alves</sub>](https://github.com/camilafernanda) |  
+| [<img src="https://user-images.githubusercontent.com/118641682/222552464-170d8fe1-83bc-4cd6-b152-269f1032f471.jpg" width=115><br><sub>Gerarado Villalonga</sub>](https://github.com/aprendedeciencia) |  
 | :---: |
