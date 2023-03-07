@@ -8,10 +8,15 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import java.awt.Font;
+import java.awt.Image;
+
 import javax.swing.SwingConstants;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
+
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 
 public class InicioP extends JFrame {
 
@@ -35,17 +40,11 @@ public class InicioP extends JFrame {
 		panel.setBounds(0, 0, 442, 273);
 		contentPane.add(panel);
 		panel.setLayout(null);
-		
-		JLabel lblNewLabel = new JLabel("CONVERSOR");
-		lblNewLabel.setBounds(97, 11, 238, 95);
-		lblNewLabel.setForeground(new Color(138, 43, 226));
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Calibri Light", Font.BOLD, 18));
-		panel.add(lblNewLabel);
+			
 		
 		JButton btnNewButton = new JButton("Conversor Monetario");
 		btnNewButton.setFont(new Font("Arial Black", Font.PLAIN, 11));
-		btnNewButton.setBounds(22, 139, 169, 32);
+		btnNewButton.setBounds(22, 207, 169, 32);
 		btnNewButton.setBackground(new Color(51, 204, 255));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -60,7 +59,7 @@ public class InicioP extends JFrame {
 		
 		JButton btnNewButton_1 = new JButton("Conversor Binario/decimal");
 		btnNewButton_1.setFont(new Font("Arial Black", Font.PLAIN, 11));
-		btnNewButton_1.setBounds(242, 139, 169, 32);
+		btnNewButton_1.setBounds(235, 207, 169, 32);
 		btnNewButton_1.setBackground(new Color(51, 204, 255));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -72,6 +71,21 @@ public class InicioP extends JFrame {
 			}
 		});
 		panel.add(btnNewButton_1);
+		
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setBounds(22, 25, 169, 214);
+		ImageIcon image = new ImageIcon("src/imagenes/64650.jpg");
+		Icon icon = new ImageIcon(image.getImage().getScaledInstance(lblNewLabel.getWidth(), lblNewLabel.getHeight(), Image.SCALE_SMOOTH));
+		lblNewLabel.setIcon(icon);
+		panel.add(lblNewLabel);
+		
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setBounds(235, 25, 169, 214);
+		ImageIcon image2 = new ImageIcon("src/imagenes/2002.i513.042_cyber_attack_security_set_isometric-14.jpg");
+		Icon icon2 = new ImageIcon(image2.getImage().getScaledInstance(lblNewLabel.getWidth(), lblNewLabel.getHeight(), Image.SCALE_SMOOTH));
+		lblNewLabel_1.setIcon(icon2);
+		panel.add(lblNewLabel_1);
 	}
-
 }

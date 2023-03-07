@@ -9,6 +9,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import java.awt.Font;
+import java.awt.Image;
+
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
@@ -16,6 +18,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import java.awt.SystemColor;
 
 public class MonedaP extends JFrame {
 
@@ -37,18 +42,20 @@ public class MonedaP extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(250, 250, 210));
+		panel.setBackground(SystemColor.text);
 		panel.setBounds(0, 0, 442, 273);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("CONVERSOR MONEDA");
 		lblNewLabel.setBounds(139, 11, 162, 33);
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblNewLabel.setFont(new Font("Arial Black", Font.BOLD, 11));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Moneda");
+		lblNewLabel_1.setBackground(new Color(255, 222, 173));
+		lblNewLabel_1.setForeground(new Color(169, 169, 169));
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 12));
 		lblNewLabel_1.setBounds(52, 103, 94, 15);
 		panel.add(lblNewLabel_1);
@@ -59,6 +66,7 @@ public class MonedaP extends JFrame {
 		monto.setColumns(10);
 		
 		JLabel lblNewLabel_2 = new JLabel("Conversión");
+		lblNewLabel_2.setForeground(new Color(169, 169, 169));
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 12));
 		lblNewLabel_2.setBounds(266, 103, 94, 15);
 		panel.add(lblNewLabel_2);
@@ -96,7 +104,7 @@ public class MonedaP extends JFrame {
 				
 				conv.setTasa(mon);
 				
-				String resultado = String.valueOf(conv.getResultado());
+				String resultado =  conv.getResultado();//String.valueOf(conv.getResultado());
 				
 				convertido.setText(resultado);
 	
@@ -104,12 +112,12 @@ public class MonedaP extends JFrame {
 			}
 		});
 		btnNewButton.setForeground(new Color(0, 0, 0));
-		btnNewButton.setBackground(new Color(135, 206, 250));
+		btnNewButton.setBackground(new Color(240, 255, 240));
 		btnNewButton.setBounds(64, 220, 94, 23);
 		panel.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Atras");
-		btnNewButton_1.setBackground(new Color(173, 216, 230));
+		btnNewButton_1.setBackground(new Color(240, 248, 255));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				InicioP ini = new InicioP();
@@ -119,5 +127,15 @@ public class MonedaP extends JFrame {
 		});
 		btnNewButton_1.setBounds(278, 220, 94, 23);
 		panel.add(btnNewButton_1);
+		
+		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setBackground(SystemColor.activeCaptionText);
+		lblNewLabel_3.setBounds(0, 0, 442, 273);
+		
+		ImageIcon image = new ImageIcon("src/imagenes/64650.jpg");
+		Icon icon = new ImageIcon(image.getImage().getScaledInstance(lblNewLabel_3.getWidth(), lblNewLabel_3.getHeight(), Image.SCALE_SMOOTH));
+		lblNewLabel_3.setIcon(icon);
+		
+		panel.add(lblNewLabel_3);
 	}
 }

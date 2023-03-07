@@ -4,6 +4,7 @@ package interfaz;
 import conversores.conversorBinario;
 import conversores.conversorMonetario;
 import java.awt.EventQueue;
+import java.awt.Image;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -15,6 +16,8 @@ import javax.swing.JList;
 import javax.swing.AbstractListModel;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.UIManager;
 import java.awt.event.ActionListener;
@@ -142,6 +145,14 @@ public class Pantalla extends JFrame {
 		});
 		btnNewButton_1.setBounds(291, 219, 91, 23);
 		panel.add(btnNewButton_1);
+		
+		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setBounds(0, 0, 442, 273);
+		
+		ImageIcon image = new ImageIcon("src/imagenes/2002.i513.042_cyber_attack_security_set_isometric-14.jpg");
+		Icon icon = new ImageIcon(image.getImage().getScaledInstance(lblNewLabel_3.getWidth(), lblNewLabel_3.getHeight(), Image.SCALE_SMOOTH));
+		lblNewLabel_3.setIcon(icon);
+		panel.add(lblNewLabel_3);
 		
 		
 		
